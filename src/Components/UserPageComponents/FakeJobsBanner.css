@@ -1,0 +1,152 @@
+  /* Banner Section */
+  .FakeJobs-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: hsl(0, 1%, 14%);
+    gap: 2rem;
+  }
+  
+  .FakeJobs-banner-image {
+    flex: 1;
+  }
+  
+  .FakeJobs-banner-image img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .FakeJobs-banner-content {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .FakeJobs-banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .FakeJobs-banner-content p {
+    font-size: 1.3rem;
+    color: rgb(255 189 32);
+    margin-bottom: 1.5rem;
+  }
+  
+  .FakeJobs-Report-button {
+    padding: 0.8rem 2rem;
+    background-color: rgb(255 189 32);
+    color: #000;
+    border: none;
+    border-radius: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .FakeJobs-Report-button:hover {
+    background-color: #e6a619;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .FakeJobs-banner {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .FakeJobs-banner-image,
+    .FakeJobs-banner-content {
+      flex: none;
+      width: 100%;
+    }
+  
+    .FakeJobs-banner-content h1 {
+      font-size: 2rem;
+    }
+  
+    .FakeJobs-banner-content p {
+      font-size: 1rem;
+    }
+  }
+  
+
+ /* Modal Styles */
+.FakeJobs-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.FakeJobs-modal-content {
+  background-color: hsl(0, 1%, 14%);
+  padding: 40px;
+  width: 100%;
+  max-width: 800px;
+  height:70vh;
+  color:rgb(255 189 32);
+  border-radius: 8px;
+  text-align: left;
+  position: relative; /* Add relative positioning to position the close button inside this container */
+}
+
+.FakeJobs-modal-content h2 ,
+.FakeJobs-modal-content h3
+{
+  font-size: 25px;
+  margin-bottom: 20px;
+  color:White;
+}
+
+.FakeJobs-modal-content p {
+  font-size:18px;
+}
+.FakeJobs-modal-content ol {
+  margin: 10px 0;
+  font-size:18px;
+  
+}
+.FakeJobs-modal-content li {
+  margin-bottom:15px;
+}
+.FakeJobs-close-modal {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius:20px;
+  padding: 8px 15px;
+  cursor: pointer;
+  position: absolute; /* Position it at the top right */
+  top: 10px; /* Space from the top */
+  right: 10px; /* Space from the right */
+}
+
+.FakeJobs-close-modal:hover {
+  background-color: #d32f2f;
+}
+
+
+/* Responsive styles for screens with max-width 768px */
+@media (max-width: 768px) {
+  .FakeJobs-modal-content {
+    width: 90%; /* Adjust the width to fit smaller screens */
+    padding: 15px; /* Reduce padding for better spacing */
+  }
+
+  .FakeJobs-modal-content h2 {
+    font-size: 20px; /* Reduce font size for better readability on small screens */
+  }
+
+  .FakeJobs-close-modal {
+    padding: 8px 16px; /* Smaller padding for mobile screens */
+  }
+}

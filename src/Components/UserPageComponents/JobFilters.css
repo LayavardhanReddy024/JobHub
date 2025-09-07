@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400");
+
+/* Job Filter Container */
+.job-filter-container {
+  width: 90%;
+  height: 60vh;
+  overflow-y: auto;
+  background-color: hsl(0, 1%, 14%);
+  padding: 15px;
+  position: relative;
+  left: 15px;
+  border-radius: 5px;
+  box-shadow: 3px 0 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.job-filter-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Webkit-based browsers (Chrome, Safari) */
+}
+
+/* Job Filter Header */
+.job-filter-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.job-filter-header h2 {
+  margin: 0;
+  color: white;
+  font-size: 22px;
+}
+
+/* Job Filter Clear Button */
+.job-filter-clear-btn {
+  background: hsl(0, 1%, 14%);
+  border: none;
+  color: rgb(255 189 32);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 1px 6px;
+  border-radius: 20px;
+}
+
+/* Job Filter Sections */
+.job-filter-section {
+  margin-bottom: 35px;
+}
+
+.job-filter-section-title {
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(255 189 32);
+  font-size: 16px;
+}
+
+.job-filter-arrow {
+  transition: transform 0.3s;
+  color: grey;
+}
+
+.job-filter-arrow.up {
+  transform: rotate(180deg);
+}
+
+/* Job Filter Options */
+.job-filter-options {
+  margin-top: 10px;
+  padding-left: 20px;
+  color: rgb(255 189 32);
+}
+
+.job-filter-options.show {
+  display: block;
+}
+
+/* Job Filter Checkbox Labels */
+.job-filter-checkbox-label {
+  display: block;
+  margin: 5px 0;
+}
+
+/* Job Filter Apply Button */
+.job-filter-apply-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(255 189 32);
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive Job Filter Styles */
+@media (max-width: 768px) {
+  .job-filter-container {
+    width: 90%;
+    max-width: none;
+    padding: 15px;
+  }
+
+  .job-filter-header {
+    flex-direction: row; /* Ensure horizontal alignment in mobile */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .job-filter-header h2 {
+    font-size: 30px;
+  }
+
+  .job-filter-clear-btn {
+    padding: 6px 10px;
+    font-size: 22px;
+  }
+
+  .job-filter-section-title {
+    font-size: 20px;
+  }
+
+  .job-filter-options {
+    font-size: 18px;
+  }
+
+  .job-filter-apply-btn {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .job-filter-see-all {
+    display: none; /* Hide 'See All' initially on smaller screens */
+  }
+
+  .job-filter-section.show-all .options {
+    display: block;
+  }
+}

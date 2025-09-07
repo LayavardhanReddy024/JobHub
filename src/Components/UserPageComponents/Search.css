@@ -1,0 +1,97 @@
+.Search-banner-section {
+  background-color: hsl(0, 1%, 14%);
+  text-align: center;
+  height: 400px;
+  position: relative;
+  width: 100%;
+}
+
+.Search-banner-heading {
+  font-size: 40px;
+  color: white;
+  padding-top: 70px;
+}
+
+.Search-banner-para {
+  font-size: 20px;
+  color: rgb(255 189 32);
+  padding-top: 10px;
+}
+
+.Search-bar-Container {
+  margin-left: 250px;
+  margin-top:30px;
+}
+
+.search-sect {
+  margin-top: 40px;
+  width: 25%;
+  float: left;
+  position: relative;
+  margin-left: 15px;
+}
+
+.search-textbox {
+  height: 65px;
+  width: 110%;
+  padding-left: 20px;
+  border-top: none;
+  border-bottom: none;
+  border-color: #000;
+  border-right: none;
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+.search-button {
+  width: 100%;
+  height: 65px;
+  background-color: rgb(255 189 32);
+  border: none;
+  border-radius: 10px;
+  color: Black;
+  cursor: pointer;
+}
+
+.search-sect .icons {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .Search-banner-heading {
+    font-size: 35px; /* Decrease the font size for smaller screens */
+    padding-top: 40px; /* Adjust padding for a more compact layout */
+  }
+
+  .Search-banner-para {
+    font-size: 16px; /* Adjust paragraph font size */
+  }
+
+  .Search-bar-Container {
+    margin-left: 0; /* Remove margin-left to make it full width */
+    padding: 10px; /* Add padding for spacing */
+  }
+
+  .search-sect {
+    width: 100%; /* Make the search section take full width on small screens */
+    margin-left: 0; /* Remove the left margin */
+    float: none; /* Reset float for mobile */
+    margin-top: 20px; /* Adjust top margin for smaller screens */
+  }
+
+  .search-textbox {
+    width: 100%; /* Make the search textbox take full width on mobile */
+    height: 50px; /* Reduce height for smaller devices */
+  }
+
+  .search-button {
+    height: 50px; /* Reduce the button height for better fit */
+  }
+
+  .search-sect .icons {
+    top: 10px; /* Adjust icon position */
+    right: 15px; /* Adjust icon position */
+ }
+}

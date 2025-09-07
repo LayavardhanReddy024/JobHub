@@ -1,0 +1,100 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Profile Dashboard Layout */
+.Profile-Dashboard {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.Profile-Dashboard-sidebar {
+    width: 23%;
+    height: 100vh;
+    background: black;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.Profile-Dashboard-sidebar h2 {
+    margin-bottom: 30px;
+    font-size:25px;
+    color: white;
+    text-align:center;
+}
+.Profile-Dashboard-sidebar hr {
+    height: 3px; /* Set the thickness */
+    background-color: rgb(255, 189, 32); /* Blue color */
+    margin: 10px 0; /* Adds space above and below */
+    margin-bottom:20px;
+}
+
+/* Menu */
+.Profile-Dashboard-menu {
+    list-style: none;
+}
+
+.Profile-Dashboard-menu li {
+    margin-top:30px;
+    padding: 10px;
+    margin-bottom: 40px;
+    color: rgb(255, 189, 32);
+    cursor: pointer;
+    font-size:18px;
+    text-align: center;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Active Menu Item */
+.Profile-Dashboard-menu li.active {
+    background: black;
+    color: rgb(255, 189, 32);
+    font-weight: bold;
+    border: 1px solid rgb(255, 189, 32);
+    border-radius: 40px;
+}
+
+/* Hover Effect */
+.Profile-Dashboard-menu li:hover {
+    background: rgb(255, 189, 32);
+    color: black;
+    border-radius: 40px;
+}
+
+/* Sidebar Toggle Button */
+.Profile-Dashboard-menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .Profile-Dashboard-sidebar {
+        position: absolute;
+        width: 60%;
+        height: 100vh;
+        z-index: 1000;
+        transform: translateX(-100%);
+    }
+
+    .Profile-Dashboard-sidebar.open {
+        transform: translateX(0);
+    }
+
+    .Profile-Dashboard-menu-icon {
+        display: block;
+    }
+}
+ 
+.Profile-Dashboard-content {
+    width:80%;
+}

@@ -1,0 +1,348 @@
+/* General container */
+.registration-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    background: hsl(0, 1%, 14%);
+    padding: 20px;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+}
+
+.logo img {
+    width: 250px;
+    height: auto;
+}
+
+/* Left side - Form */
+.registration-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-right: 1px solid rgb(255, 189, 32);
+}
+
+.registration-left h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: rgb(255, 189, 32);
+}
+
+.registration-left form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+/* Radio buttons */
+.registration-left input[type="radio"] {
+    transform: scale(1.5);
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.registration-left label {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: white;
+    margin-right: 20px;
+}
+
+/* Input fields */
+.registration-left input,.registration-left select {
+    padding: 10px;
+    font-size: 1.2em;
+    height: 50px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    outline: none;
+}
+.registration-left form input {
+    color: #fff;
+}
+.Register-Role-Selection-Text {
+    position: relative;
+    margin-left: 30px;
+}
+.Register-Role-Selection-Text p {
+    color: rgb(255, 189, 32);
+    position: absolute;
+    top: 10px;
+    left: 90px;
+    font-size: 20px;
+}
+
+/* Buttons */
+.registration-left button {
+    padding: 10px;
+    background-color: rgb(255, 189, 32);
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 50px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.registration-left button:hover {
+    background-color: rgb(230, 160, 20);
+}
+
+/* Google Register Button */
+.registration-left .google-register {
+    background: #db4437;
+    width: 70%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.registration-left .google-register:hover {
+    background: #b4362a;
+}
+
+/* Right side - Image and Text */
+.registration-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.registration-right img {
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.registration-right p {
+    color: white;
+    font-size: 1.7em;
+    margin-top: 15px;
+    max-width: 80%;
+}
+
+/* Divider */
+.line-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin: 10px 0;
+}
+
+.line-text::before,
+.line-text::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid white;
+    margin: 0 10px;
+}
+
+.line-text span {
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+/* Verification & OTP Container */
+.register-verification-container, 
+.otp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+/* Headings */
+.register-verification-container h2, 
+.otp-container h2 {
+    font-size: 2rem;
+    color: rgb(255, 189, 32);
+    margin-bottom: 20px;
+}
+
+/* Mobile Number (Editable) */
+.register-verification-container input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    text-align: center;
+}
+
+/* OTP Input */
+.otp-container input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    text-align: center;
+}
+
+/* Timer Display */
+.otp-container p {
+    font-size: 1.2rem;
+    color: white;
+    margin: 10px 0;
+}
+
+.resend-otp{
+    cursor:pointer;
+}
+
+/* Buttons */
+.verification-container button, 
+.otp-container button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Pop-up Overlay */
+.registration-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Pop-up Content */
+.registration-popup-content {
+    background: black;
+    width: 50%;
+    height: 40%;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid rgb(255, 189, 32);
+}
+
+/* Close button for pop-up */
+.registration-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: red;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.registration-popup-close:hover {
+    background: darkred;
+}
+
+/* Pop-up Left & Right sections */
+.registration-popup-left, 
+.registration-popup-right {
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.registration-popup-left {
+    border-right: 1px solid rgb(255, 189, 32);
+}
+
+.registration-popup-right {
+    margin-top: 40px;
+}
+
+/* Pop-up Images */
+.registration-popup-left img, 
+.registration-popup-right img {
+    width: 200px;
+    height: auto;
+}
+
+/* Pop-up Text */
+.registration-popup-left p, 
+.registration-popup-right p {
+    font-size: 1.2em;
+    margin-top: 40px;
+    font-weight: bold;
+    color: rgb(255, 189, 32);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .registration-container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .registration-left, .registration-right {
+        width: 100%;
+        border: none;
+        padding: 10px;
+    }
+
+    .registration-right img {
+        width: 300px;
+    }
+
+    .registration-right p {
+        font-size: 1em;
+        max-width: 90%;
+    }
+
+    .registration-popup-content {
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .registration-popup-left, .registration-popup-right {
+        width: 100%;
+        border: none;
+        padding: 20px;
+    }
+
+    .registration-popup-left img, .registration-popup-right img {
+        width: 150px;
+    }
+}

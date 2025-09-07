@@ -1,0 +1,69 @@
+.Profile-content {
+    width: 100%;
+    padding: 40px;
+    overflow-y: auto;
+    height: 100vh;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content */
+    text-align: center;
+}
+
+.Profile-content::-webkit-scrollbar {
+    display: none;
+}
+
+.Profile-section {
+    background: hsl(0, 1%, 10%);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    width: 80%; /* Adjust width for better alignment */
+    border: 1px solid rgb(255 189 32);
+}
+
+.Profile-section h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.Profile-section p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: rgb(255 189 32);
+}
+
+.Profile-profile-photo {
+    width: 120px;
+    height: 120px;
+    background: gray;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px  solid rgb(255 189 32);
+}
+
+.Profile-profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .Profile-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .Profile-section {
+        width: 90%;
+    }
+}

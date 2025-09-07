@@ -1,0 +1,495 @@
+/* Admin Dashboard Styles */
+.admin-dashboard {
+  display: grid;
+  width: 100%;
+  height: 15%;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 20px;
+  padding: 10px;
+  background-color: hsl(0, 1%, 14%);
+  color: #333;
+}
+
+.admin-profile-card,
+.admin-calendar-card,
+.admin-upcoming-events {
+  background-color: #222;
+  border-radius: 16px;
+  padding: 0.2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgb(255 189 32);
+}
+
+.admin-profile-card .profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.admin-profile-card .profile-pic img {
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+  margin-top: 40px;
+  margin-left:20px;
+}
+
+.admin-profile-card .profile-info {
+  margin-left: 2rem;
+  margin-top: 40px;
+}
+
+.admin-profile-card .profile-name h2 {
+  font-size: 3.25rem;
+  font-weight: 600;
+  color: rgb(255, 189, 32);
+  margin-bottom: 40px;
+}
+
+.admin-profile-card .profile-details p {
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.admin-calendar-card .calendar-header {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(255 189 32);
+  align-items: center;
+}
+
+.admin-calendar-card .calendar-header button {
+  font-size: 1rem;
+  background: #222;
+  color: #fff;
+  padding: 1px 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.admin-calendar-card .calendar-header h3 {
+  font-size: 1.25rem;
+}
+
+.admin-calendar-card .calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 0.5fr);
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+}
+
+.admin-calendar-card .calendar-days div {
+  padding: 0.2rem;
+}
+
+.admin-calendar-card .calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.001rem;
+  color: rgb(255 189 32);
+  text-align: center;
+}
+
+.admin-calendar-card .calendar-grid div {
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.admin-calendar-card .calendar-grid div:hover {
+  background-color: rgb(255 189 32);
+  color: #000;
+  border: 1px solid #000;
+}
+
+.admin-calendar-card .calendar-grid .today {
+  background-color: #000;
+  color: rgb(255 189 32);
+  border: 1px solid rgb(255 189 32);
+}
+
+.admin-calendar-card .calendar-grid .selected {
+  background-color: rgb(255 189 32);
+  color: #000;
+  border: 1px solid #000;
+}
+
+.admin-calendar-card .calendar-add-event {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.admin-calendar-card .calendar-add-event input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid rgb(255 189 32);
+  border-radius: 0.75rem;
+  background: #222;
+  color: #fff;
+}
+
+.admin-calendar-card .calendar-add-event button {
+  background-color: rgb(255 189 32);
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.admin-upcoming-events .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(255 189 32);
+}
+
+.admin-upcoming-events h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.view-all-btn {
+  background-color: #000;
+  color: rgb(255 189 32);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin:5px 5px 5px;
+  border: 2px solid rgb(255 189 32);
+}
+
+ul {
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.event-card {
+  background-color: #000;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  position: relative; /* Ensures the close button is positioned relative to this container */
+  display: flex;
+  justify-content: space-between; /* Aligns content and button */
+  align-items: center;
+}
+
+.event-details h4 {
+  font-size: 1rem;
+  margin: 0;
+  color: #0f0;
+}
+
+.event-details p {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  color: #fff;
+}
+
+/* Properly position the close button on the right */
+.event-card .close-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.event-card .close-btn:hover {
+  color: darkred;
+}
+
+/* Popup Overlay */
+.Events-popup-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.Events-popup {
+  background: #222;
+  color:#222;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  text-align: center;
+  overflow-y:auto;/* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+}
+
+.Events-popup::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.Events-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:rgb(255 189 32);
+  
+}
+
+.Events-popup .Events-close-popup-btn {
+  background-color: transparent; /* Remove background */
+  border: none; /* Remove border */
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px; /* Adjust padding if needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:red;
+}
+
+.Events-popup-event-card {
+  background-color: #000;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.Events-popup-event-card h4 {
+  font-size: 1rem;
+  margin: 0;
+  color: #0f0;
+}
+
+.Events-popup-event-card p {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  color: #fff;
+}
+
+
+.admin-information {
+  display: grid;
+  width: 100%;
+  height: 15%;
+  grid-template-columns: 1.5fr 1.5fr;
+  gap: 20px;
+  padding: 10px;
+  background-color: #222;
+  color: #fff;
+}
+
+.admin-info-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  border: 2px solid rgb(255 189 32);
+}
+
+.admin-info-card h3 {
+  margin: 0;
+  font-size: 28px;
+  color:rgb(255 189 32);
+}
+
+.admin-info-card p {
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom:50px;
+}
+
+.admin-info-card .edit-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #000;
+  color: rgb(255 189 32);
+  border: 1px solid rgb(255 189 32);
+  padding: 7px 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-top:10px;
+}
+
+.about-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-popup {
+  background: #444;
+  padding: 40px;
+  border-radius: 8px;
+  width: 60%;
+  text-align: center;
+  position: relative;
+}
+
+.about-input {
+  width: 100%;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 4px;
+  color:rgb(255 189 32);
+  background:#222;
+  border: none; overflow-y:auto;/* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+}
+
+.about-input ::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.about-submit-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Close Button */
+.about-popup-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.admin-info-card {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid gold;
+  color: white;
+  position:relative;
+}
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-note-btn {
+  background-color: gold;
+  color: black;
+  font-size: 20px;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.note-display {
+  background-color: #222;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.close-note-btn {
+  background: red;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 50%;
+  font-size: 14px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.view-notes-btn {
+  margin-top: 10px;
+  background-color: gold;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  position:absolute;
+  bottom:10px;
+  right:10px;
+}
+
+.notes-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notes-popup-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  width: 500px;
+  position:relative;
+}
+.notes-popup-content textarea {
+  width:80%;
+  padding:5px;
+  color:rgb(255 189 32);
+  background:#222;
+  border:1px solid rgb(255 189 32);
+}
+
+.notes-popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.notes-popup-buttons button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.notes-popup-buttons button:first-child {
+  background: gold;
+  color: black;
+}
+
+.notes-popup-buttons button:last-child {
+  background: red;
+  color: white;
+}
+.View-Notes-close-Button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: gold;
+  color: black;
+}

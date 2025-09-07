@@ -1,0 +1,91 @@
+.jobs-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .jobs-banner-content {
+    flex: 1;
+    text-align: center;
+    padding-right: 2rem;
+  }
+  
+  .jobs-heading {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .jobs-paragraph {
+    font-size: 1.3rem;
+    color: rgb(255, 189, 32);
+    margin-bottom: 1.5rem;
+  }
+  
+  .jobs-button {
+    background-color: #ffbd20;
+    color: black;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .jobs-button:hover {
+    background-color: #e6a619;
+  }
+  
+  .jobs-banner-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .jobs-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Media Query for Screens with max-width: 768px */
+  @media (max-width: 768px) {
+    .jobs-banner {
+      flex-direction: column;
+      text-align: center;
+      padding: 1.5rem;
+    }
+  
+    .jobs-banner-content {
+      padding-right: 0;
+      width: 100%;
+    }
+  
+    .jobs-heading {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+    }
+  
+    .jobs-paragraph {
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+    }
+  
+    .jobs-button {
+      font-size: 1rem;
+      padding: 8px 20px;
+    }
+  
+    .jobs-banner-image {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  
+    .jobs-img {
+      max-width: 300px;
+    }
+  }
+  

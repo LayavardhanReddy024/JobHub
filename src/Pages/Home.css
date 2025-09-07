@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400");
+
+
+body {
+  overflow-y:auto;/* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ================= VARIABLE ================ */
+:root {
+    --primary-color:  rgb(255 189 32);
+  --primary-color-alt: rgb(255 189 32);
+}
+
+/* ================= BASE ==================== */
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.bx {
+  font-size: 3.5rem;
+}
+/* -- BODY -- */
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  justify-content: space-between;
+  background-color: var(--white-color);
+  scroll-behavior: smooth;
+  overflow-y:scroll;
+  height:auto;
+  
+}
+
+
+/* ================= HEADER ================ */
+header {
+  display: flex;
+  background-color:hsl(0, 1%, 14%);
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  cursor:pointer;
+  position:sticky;
+  top:0;
+  z-index:150;
+}
+header .company-logo img {
+  margin-top:-70px;
+  width: 45%;
+  margin-bottom:-70px;
+  cursor:pointer;
+}
+header .nav-items {
+  display: flex;
+  list-style-type: none;
+  z-index:100;
+}
+header .nav-item {
+  margin: 0 1.5rem;
+  margin-right:2px;
+}
+
+header .nav-link {
+  font-size: 1.3rem;
+  letter-spacing: 0.05rem;
+  position: relative;
+  background: -webkit-linear-gradient(
+    var(--primary-color-alt),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header .nav-link::before {
+  content: "";
+  background: linear-gradient(var(--primary-color), var(--primary-color-alt));
+  width: 100%;
+  height: 0.05rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 150ms;
+}
+header .nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+header .menu-toggle {
+  display: none;
+}
+header .bx-menu,
+header .bx-x {
+  cursor: pointer;
+  background: -webkit-linear-gradient(
+    120deg,
+    var(--primary-color-alt),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: none !important;
+}
+/* =============== MEDIA QUERIES ======= */
+
+@media screen and (max-width: 768px) {
+  /* ================= HEADER ================ */
+  header {
+    padding: 0.5rem 1rem;
+  }
+  header .navbar {
+    background-color:hsl(0, 1%, 14%) ;
+    position: absolute;
+    top: 3.5rem;
+    right: 0;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 500ms;
+  }
+  header .show-navbar {
+    display: flex;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 300ms;
+  }
+  header .nav-items {
+    display: flex;
+    flex-direction: column;
+  }
+  header .nav-item {
+    margin: 0.5rem 0;
+  }
+  header .menu-toggle {
+    display: block;
+  }
+  header .bx-menu {
+    display: block !important;
+  }
+  header .show-bx {
+    display: block !important;
+  }
+  header .hide-bx {
+    display: none !important;
+  }
+}
+@media (min-width: 769px) {
+  header {
+    padding: 1rem 5rem;
+  }
+}

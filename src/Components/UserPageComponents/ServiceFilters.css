@@ -1,0 +1,135 @@
+.servicefilter-container {
+  width: 90%;
+  height: 60vh;
+  overflow-y: auto;
+  background-color: hsl(0, 1%, 14%);
+  padding: 15px;
+  position: relative;
+  left: 15px;
+  border-radius: 5px;
+  box-shadow: 3px 0 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  
+  .servicefilter-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Webkit-based browsers (Chrome, Safari) */
+  }
+  
+  .servicefilter-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .servicefilter-header h2 {
+    margin: 0;
+    color: white;
+    font-size: 22px;
+  }
+  
+  .servicefilter-clear-btn {
+    background: hsl(0, 1%, 14%);
+    border: none;
+    color: rgb(255 189 32);
+    cursor: pointer;
+    font-size: 14px;
+    padding:1px 6px;
+    border-radius: 20px;
+  }
+  
+  .servicefilter-section {
+    margin-bottom: 35px;
+  }
+  
+  .servicefilter-section-title {
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255 189 32);
+    font-size: 18px;
+  }
+  
+  .servicefilter-arrow {
+    transition: transform 0.3s;
+    color: grey;
+  }
+  
+  .servicefilter-arrow.up {
+    transform: rotate(180deg);
+  }
+  
+  .servicefilter-options {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: rgb(255 189 32);
+  }
+  
+  .servicefilter-options.show {
+    display: block;
+  }
+  
+  .servicefilter-checkbox-label {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .servicefilter-apply-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(255 189 32);
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .servicefilter-container {
+      width: 90%;
+      max-width: none;
+      padding: 10px;
+    }
+  
+    .servicefilter-header {
+      flex-direction: row; /* Ensure horizontal alignment in mobile */
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .servicefilter-header h2 {
+      font-size: 30px;
+    }
+  
+    .servicefilter-clear-btn {
+      padding: 6px 10px;
+      font-size: 22px;
+    }
+  
+    .servicefilter-section-title {
+      font-size: 20px;
+    }
+  
+    .servicefilter-options {
+      font-size: 18px;
+    }
+  
+    .servicefilter-apply-btn {
+      padding: 12px;
+      font-size: 16px;
+    }
+  
+    .servicefilter-see-all {
+      display: none; /* Hide 'See All' initially on smaller screens */
+    }
+  
+    .servicefilter-section.show-all .options {
+      display: block;
+    }
+  }
+  

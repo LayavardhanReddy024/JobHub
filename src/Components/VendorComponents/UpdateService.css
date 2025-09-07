@@ -1,0 +1,72 @@
+.UpdateService {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.UpdateService-container {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  color: rgb(255, 189, 32);
+  overflow-y: auto;
+  max-height: 90vh;
+  margin-left:30px;
+  /* Hide scrollbar */
+scrollbar-width: none; /* Firefox */
+}
+
+.UpdateService-container::-webkit-scrollbar {
+display: none; /* Chrome, Safari */
+}
+
+.UpdateService-heading{
+text-align:center;
+}
+
+
+/* Ensure labels and inputs are aligned properly */
+.UpdateService-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.UpdateService-label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.UpdateService-input,
+.UpdateService-textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid rgb(255, 189, 32);
+  border-radius: 4px;
+  background: black;
+  color: white;
+}
+
+/* Ensure textareas have proper height */
+.UpdateService-textarea {
+  min-height: 80px;
+}
+
+/* Submit button styling */
+.UpdateService-button {
+  margin-top: 15px;
+  padding: 10px;
+  background: rgb(255, 189, 32);
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+.UpdateService-button:hover {
+  background: white;
+  color: black;
+}

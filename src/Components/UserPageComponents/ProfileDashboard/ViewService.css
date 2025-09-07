@@ -1,0 +1,13 @@
+.View-Service-Container {
+    width:100%;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 1%, 14%);
+    overflow-y: auto;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+
+   .View-Service-Container::-webkit-scrollbar {
+     display: none; /* For Chrome, Safari, and Opera */
+  }

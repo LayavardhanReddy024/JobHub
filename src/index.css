@@ -1,0 +1,9 @@
+body {
+    overflow-y:auto;/* Hide scrollbar */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  

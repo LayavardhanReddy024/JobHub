@@ -1,0 +1,197 @@
+/* Banner Section */
+.FakeJobPostings-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: hsl(0, 1%, 14%);
+    gap: 2rem;
+  }
+  
+  .FakeJobPostings-banner-image {
+    flex: 1;
+  }
+  
+  .FakeJobPostings-banner-image img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .FakeJobPostings-banner-content {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .FakeJobPostings-banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .FakeJobPostings-banner-content p {
+    font-size: 1.3rem;
+    color: rgb(255 189 32);
+    margin-bottom: 1.5rem;
+  }
+  
+  .FakeJobPostings-Report-button {
+    padding: 0.8rem 2rem;
+    background-color: rgb(255 189 32);
+    color: #000;
+    border: none;
+    border-radius: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .FakeJobPostings-Report-button:hover {
+    background-color: #e6a619;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .FakeJobPostings-banner {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .FakeJobPostings-banner-image,
+    .FakeJobPostings-banner-content {
+      flex: none;
+      width: 100%;
+    }
+  
+    .FakeJobPostings-banner-content h1 {
+      font-size: 2rem;
+    }
+  
+    .FakeJobPostings-banner-content p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Modal Styles */
+  .FakeJobPostings-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .FakeJobPostings-modal-content {
+    background-color: hsl(0, 1%, 14%);
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+    height: 80vh;
+    color: rgb(255 189 32);
+    border-radius: 8px;
+    text-align: left;
+    position: relative;
+  }
+  
+  .FakeJobPostings-modal-content h2,
+  .FakeJobPostings-modal-content h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .FakeJobPostings-modal-content p {
+    font-size: 18px;
+  }
+  
+  .FakeJobPostings-modal-content ol {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .FakeJobPostings-modal-content li {
+    margin-bottom: 15px;
+  }
+  
+  .FakeJobPostings-close-modal {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .FakeJobPostings-close-modal:hover {
+    background-color: #d32f2f;
+  }
+  
+  .FakeJobPostings-terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width:100%;
+    margin-top: 20px;
+    
+  }
+  .FakeJobPostings-terms-column {
+    width:100%;
+  }
+  
+  .FakeJobPostings-terms input {
+    width: 18px;
+    height: 18px;
+    margin-right:20px;
+  }
+  
+  .FakeJobPostings-terms label {
+    font-size: 16px;
+    color: white;
+  }
+  
+  .FakeJobPostings-accept-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgb(255 189 32);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .FakeJobPostings-accept-button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  
+  .FakeJobPostings-accept-button:hover:not(:disabled) {
+    background-color: #e6a619;
+  }
+  
+  /* Responsive styles for screens with max-width 768px */
+  @media (max-width: 768px) {
+    .FakeJobPostings-modal-content {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .FakeJobPostings-modal-content h2 {
+      font-size: 20px;
+    }
+  
+    .FakeJobPostings-close-modal {
+      padding: 8px 16px;
+    }
+  }

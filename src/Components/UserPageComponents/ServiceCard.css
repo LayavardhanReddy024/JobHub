@@ -1,0 +1,95 @@
+.service-card {
+  width: 95%;
+  display: flex;
+  background-color: hsl(0, 1%, 10%);
+  align-items: center;
+  border: 1px solid rgb(255 189 32);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 20px;
+  margin-bottom:50px;
+}
+
+.service-card-image {
+  width: 40%;
+}
+
+.service-card-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.service-card-info {
+  width: 60%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  color: rgb(255 189 32);
+}
+
+.service-card-service-type {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(214, 208, 15);
+  margin-bottom: 20px;
+  margin-top:20px'
+}
+
+.service-card-service-type,
+.service-card-vendor,
+.service-card-location,
+.service-card-charges,
+.service-card-timings,
+.service-card-description,
+.service-card-experience,
+.service-card-rating,
+.service-card-services-count {
+font-size: 16px;
+color: rgb(255 189 32);
+}
+
+
+.service-card-apply-service {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: #FFBD20;
+  border: none;
+  color: black;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight:bold;
+}
+
+.service-card-apply-service:hover {
+  background-color: #000;
+  border: 1px solid rgb(255 189 32);
+  color: #FFBD20;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-card-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .service-card-info {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .service-card-apply-service {
+    width: 100%;
+  }
+}

@@ -1,0 +1,77 @@
+.job-postings-container {
+    border-radius: 8px;
+    background-color: hsl(0, 1%, 14%);
+    width: 90%;
+    height:60vh;
+    margin: 0 auto;
+    overflow-y: auto;
+    scrollbar-width: none; /* For Firefox */
+  }
+  
+  .job-postings-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+  }
+  
+  .job-postings-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top:0;
+    color: #fff;
+  }
+
+  /* Pop-up overlay */
+.Full-job-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Pop-up card */
+.Full-job-popup-card {
+  width: 95%;
+  min-height: 80px;
+  max-height: 90vh;
+  background: hsl(0, 1%, 14%);
+  padding: 20px;
+  border-radius: 20px;
+  border:2px solid rgb(255 189 32);
+  position: relative;
+  overflow-y: auto; /* Enables scrolling if content exceeds the height */
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* Close button */
+.Full-job-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color:white;
+}
+
+/* Responsive styles for screens up to 768px */
+@media (max-width: 768px) {
+  .Full-job-popup-card {
+    width: 95%; /* Make it more compact on small screens */
+    min-height: 120px; /* Slightly taller for readability */
+    padding: 15px;
+  }
+
+  .Full-job-close-btn {
+    font-size: 16px; /* Slightly smaller close button */
+    top: 5px;
+    right: 10px;
+  }
+}
+

@@ -1,0 +1,88 @@
+.AdditionalDetails-Container {
+    height: 100vh;
+    overflow-y: auto; /* Hides scrollbar, content will be clipped */
+    -ms-overflow-style: none;  /* Hides scrollbar in IE */
+    scrollbar-width: none;  /* Hides scrollbar in Firefox */
+}
+
+.AdditionalDetails-Container::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Webkit browsers (Chrome, Safari) */
+}
+
+.AdditionalDetails-section {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    position: relative;
+    height: 35vh;
+    color:rgb(255 189 32);
+    margin-left:50px;
+    margin-bottom:20px;
+    margin-top:20px;
+}
+.AdditionalDetails-section  p {
+    font-size:18px;
+}
+.AdditionalDetails-section strong {
+    font-size:25px;
+    color:White;
+}
+.AdditionalDetails-edit-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    cursor: pointer;
+    font-size:16px;
+    color: rgb(255 189 32);
+    margin-right:20px;
+    border:1px solid white;
+    padding: 3px 25px;
+    border-radius:40px;
+}
+
+.AdditionalDetails-edit-btn:hover {
+    background:rgb(255 189 32) ;
+    color: #000 ;
+}
+
+.AdditionalDetails-edit-box {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 20px;
+    top: 10px;
+    height:20vh;
+    background: hsl(0, 1%, 10%);
+    color:rgb(255 189 32);
+    display: none; /* Keep this to hide the box initially */
+}
+
+.AdditionalDetails-section.editing .AdditionalDetails-edit-box {
+    display: block; /* This will display the box when the parent section has 'editing' class */
+}
+
+.AdditionalDetails-save-btn {
+    margin-top: 20px;
+    display: block;
+    background: rgb(255 189 32);
+    color: black;
+    font-size:16px;
+    border-radius:20px;
+    border: 1px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+
+    .AdditionalDetails-section {
+        padding: 8px 0;
+    }
+
+    .AdditionalDetails-edit-box {
+        font-size: 14px;
+    }
+}

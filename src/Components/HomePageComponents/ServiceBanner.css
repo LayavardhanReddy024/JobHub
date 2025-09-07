@@ -1,0 +1,75 @@
+.service-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .service-banner-image {
+    flex: 1;
+  }
+  
+  .service-banner-image-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .service-banner-content {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .service-banner-content-h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .service-banner-content-p {
+    font-size: 1.3rem;
+    color: rgb(255, 189, 32);
+    margin-bottom: 1.5rem;
+  }
+  
+  .service-explore-button {
+    padding: 10px 30px;
+    background-color: rgb(255, 189, 32);
+    color: #000;
+    border: none;
+    border-radius: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .service-explore-button:hover {
+    background-color: #e6a619;
+  }
+  
+  @media (max-width: 768px) {
+    .service-banner {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .service-banner-image {
+      flex: none;
+      width: 100%;
+    }
+  
+    .service-banner-content {
+      flex: none;
+      width: 100%;
+    }
+  
+    .service-banner-content-h1 {
+      font-size: 2rem;
+    }
+  
+    .service-banner-content-p {
+      font-size: 1rem;
+    }
+  }
+  

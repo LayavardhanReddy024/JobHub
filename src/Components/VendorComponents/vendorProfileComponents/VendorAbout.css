@@ -1,0 +1,81 @@
+.vendor-about {
+    max-width: 90%;
+    margin: 50px;
+    padding: 20px;
+    margin-left:90px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align content to the left */
+  }
+  
+  .about-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .about-header h2 {
+    margin: 0;
+    color: #fff;
+  }
+  
+  .vendor-about .edit-icon {
+    font-size: 22px;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .vendor-about .edit-icon:hover {
+    color: #0056b3;
+  }
+  
+  .vendor-about .about-text {
+    margin-top: 30px;
+    font-size: 18px;
+    color: rgb(255 189 32);
+  }
+  
+  .vendor-about .edit-container {
+    margin-top: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align input to left */
+}
+
+.vendor-about .about-input {
+    width: 100%;
+    height: 200px; /* Increase height */
+    padding: 20px;
+    font-size: 18px;
+    background: hsl(0, 1%, 19%);
+    border: 1px solid rgb(255 189 32);
+    border-radius: 4px;
+    color:#fff;
+    resize: none; /* Disable manual resizing */
+    overflow: hidden; /* Hide scrollbars */
+}
+
+  
+  .vendor-about .button-container {
+    display: flex;
+    justify-content: center; /* Center the button */
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .vendor-about .save-btn {
+    padding: 10px 25px;
+    background-color: #28a745;
+    margin-top: 25px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .vendor-about .save-btn:hover {
+    background-color: #218838;
+  }
+  

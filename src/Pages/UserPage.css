@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400");
+
+/* Header Stylings */
+.UserHeader-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 0 20px;
+  top:0;
+  color: rgb(255 189 32);
+  margin-bottom:-60px;
+}
+
+.UserHeader-logo img {
+  width: 250px;
+  margin-top:-65px;
+  margin-left:60px;
+}
+
+.UserHeader-nav {
+  display: flex;
+  align-items: center;
+}
+
+.UserHeader-nav-items {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.UserHeader-nav-items li {
+  margin: 0 55px;
+}
+
+.UserHeader-nav-items a {
+  text-decoration: none;
+  color: rgb(255 189 32);
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.UserHeader-nav-items a:hover {
+  text-decoration:underline;
+  color:rgb(255 189 32);
+}
+
+/* Profile Icon */
+.UserHeader-profile-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.UserHeader-profile-icon img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px  solid rgb(255 189 32);
+  cursor: pointer;
+}
+
+/* Dropdown Menu */
+.UserHeader-dropdown-menu {
+  position: absolute;
+  top: 110px;
+  right: -50px;
+  background:hsl(0, 1%, 14%) ;
+  color: rgb(255 189 32);
+  width: 350px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border: 1px  solid rgb(255 189 32);
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.UserHeader-dropdown-menu li {
+  list-style: none;
+  padding: 10px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.UserHeader-dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.UserHeader-dropdown-menu a {
+  text-decoration: none;
+  color: rgb(255 189 32);
+  display: block;
+  font-size: 16px;
+}
+
+.UserHeader-dropdown-menu a:hover {
+  color: rgb(255 189 32);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* Show dropdown */
+.UserHeader-show-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+@media (max-width: 768px) {
+  .UserHeader-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      flex-wrap: wrap;
+  }
+
+  .UserHeader-logo img {
+      width: 150px;
+  }
+
+  .UserHeader-nav {
+      display: flex;
+      align-items: center;
+      gap: 0;
+  }
+
+  .UserHeader-nav-items {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0;
+  }
+
+  .UserHeader-nav-items li {
+      list-style: none;
+  }
+
+  .UserHeader-nav-items a {
+      text-decoration: none;
+      color:rgb(255 189 32);;
+      font-size: 19px;
+  }
+
+  /* Profile dropdown */
+  .UserHeader-profile {
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+  }
+
+  .UserHeader-dropdown-menu {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.UserHeader-show-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+
+  .UserHeader-profile:hover .UserHeader-dropdown-menu {
+      display: flex;
+  }
+
+  .UserHeader-dropdown-menu a {
+      padding: 5px;
+      text-decoration: none;
+      color: rgb(255 189 32);;
+      display: block;
+      transition: 0.3s;
+  }
+
+  .UserHeader-dropdown-menu a:hover {
+      color:  rgb(255 189 32);;
+  }
+
+  /* Dropdown Animation */
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+          transform: translateY(-5px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+}
+
+/* Category stylings */
+
+.Category-container {
+display: flex;
+width: 99%;
+background-color: hsl(0, 1%, 17%);
+color: white;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+margin-bottom:30px;
+}
+
+.Category-section {
+flex: 1;
+padding: 20px;
+text-align: center;
+cursor: pointer;
+transition: background-color 0.3s, color 0.3s;
+font-size: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+}
+
+.Category-section.active {
+background-color:rgb(255 189 32);
+color: #000;
+}
+
+.Category-content {
+width: 100%;
+text-align: center;
+padding: 20px;
+}
+
+@media (max-width: 768px) {
+.Category-container {
+flex-direction: row; /* Stack sections vertically */
+margin-left: 0; /* Remove left margin */
+}
+
+.Category-section {
+font-size: 18px; /* Adjust font size */
+padding: 15px; /* Adjust padding */
+width: 100%; /* Ensure each section takes full width */
+}
+
+.Category-section.active {
+background-color: rgb(255 189 32);
+color: Black;
+}
+
+.Category-content {
+padding: 15px; /* Reduce content padding */
+}
+}
+.Category-layout-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    margin-top:50px;
+  }
+  
+  .Category-filters-container {
+    width: 25%; /* Set the width of the filter container */
+  }
+  
+  .Category-postings-container {
+    width: 70%; /* Set the width of the job postings container */
+  }
+  
+  /* For screens smaller than 768px */
+  @media (max-width: 768px) {
+    .Category-layout-container {
+      flex-direction: column; /* Switch to column layout on smaller screens */
+    }
+  
+    .Category-filters-container,
+    .Category-postings-container {
+      width: 100%; /* Make both containers full width in column view */
+    }
+  }
+  .Userpage-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:1200;
+    overflow:hidden;
+  }
+  
+  .Userpage-modal-content {
+    background: hsl(0, 1%, 14%);
+    width:30%;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    border:1px solid rgb(255 189 32);
+  }

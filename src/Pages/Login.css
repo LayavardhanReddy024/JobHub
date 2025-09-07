@@ -1,0 +1,393 @@
+.Login-container {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: hsl(0, 1%, 14%);
+  width: 100%;
+}
+
+/* Logo */
+.Login-logo {
+  position: absolute;
+  top: -40px;
+  left: 50px;
+}
+
+.Login-logo img {
+  width: 220px;
+}
+
+/* Category Selection */
+.Selection-container {
+  width: 85%;
+  height: 75vh;
+  display: flex;
+  border: 1px solid rgb(255, 189, 32);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: hsl(0, 1%, 14%);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 70px;
+  animation: fadeIn 1s ease-in-out;
+}
+   .Selection-container::before {
+    content: "";
+    top: 12%;
+    bottom: 14%;
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    background-color: rgb(255, 189, 32);
+  }
+
+.Login-half {
+  text-align: center;
+  width: 60%;
+  height: 75%;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 10px;
+  transform: translateY(20px);
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+}
+
+.Login-half:hover {
+  transform: scale(1.05);
+}
+
+.Login-half img {
+  width: 380px;
+  height: 280px;
+  object-fit: cover;
+  
+}
+
+.Login-half a {
+  display: block;
+  margin-top: 100px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(255, 189, 32);
+  
+}
+
+/* Login Forms */
+.Login-login-container {
+  display: none;
+  width: 100%;
+  max-width: 90%;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  gap:20%;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+/* Left Section - Image */
+.Login-left-half {
+  width: 55%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 40px;
+   border-right : 1px solid rgb(255, 189, 32);
+}
+
+.Login-left-half img {
+  width: 100%;
+  height:50vh;
+  max-width: 550px;
+  margin-left:50px;
+  border-radius: 10px;
+}
+
+/* Right Section - Form */
+.Login-right-half {
+  width: 60%;
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+  position:relative;
+  margin-left:-100px;
+}
+
+.Login-right-half h2 {
+  font-size:45px;
+  margin-bottom: 20px;
+  color: white ;
+}
+
+.Login-login-input {
+  width: 100%;
+  height:65px;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid rgb(255, 189, 32);
+  border-radius: 15px;
+  color:white;
+  margin-top:25px;
+  background: hsl(0, 1%, 14%);
+}
+.Login-line-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: hsl(0, 1%, 14%);
+    
+  }
+  .Login-line-text::before,
+  .Login-line-text::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+    background: hsl(0, 1%, 14%);
+    margin: 0 10px;
+  }
+  .Login-line-text span {
+    white-space: nowrap;
+    font-weight: bold;
+    margin-top:40px;
+    background: hsl(0, 1%, 14%);
+  }
+.Login-button,
+.Login-SignIn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 20px;
+  background: rgb(255, 189, 32);;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.Login-button:hover ,
+.Login-SignIn:hover {
+  background: black;
+  border:1px solid rgb(255, 189, 32);
+  color: rgb(255, 189, 32);;
+}
+
+.Login-google-login {
+  background: #db4437;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  color:black;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.Login-google-login:hover{
+ background: #db4437;
+}
+.Login-left-half p {
+          color: white;
+          font-size: 1.7em;
+          margin-top: 15px;
+          max-width: 80%;
+      }
+/* Footer */
+.Login-footer, .Login-login-footer {
+  text-align: center;
+  margin-top: 40px;
+  color: white;
+  font-size: 20px;
+}
+
+.Login-footer a, .Login-login-footer a {
+  color: rgb(255, 189, 32);;
+  text-decoration: underline;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  /* Adjust Logo */
+  .Login-logo img {
+      width: 100px;
+  }
+
+  /* Adjust Category Selection */
+  .Selection-container {
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 80px;
+  }
+
+  .Login-half {
+      width: 80%;
+      padding: 15px;
+  }
+
+  .Login-half img {
+      width: 120px;
+      height: 120px;
+  }
+
+  /* Login Form Layout for Mobile */
+  .Login-login-container {
+      flex-direction: column;
+      width: 90%;
+      max-width: 400px;
+  }
+
+  /* Logo Position */
+  .Login-logo {
+      position: static;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  /* Adjust Left Section - Image */
+  .Login-left-half {
+      width: 100%;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+  }
+
+  .Login-left-half img {
+      max-width: 150px;
+  }
+
+  /* Adjust Right Section - Form */
+  .Login-right-half {
+      width: 100%;
+      padding: 20px;
+  }
+
+  .Login-right-half h2 {
+      font-size: 20px;
+  }
+
+  .Login-login-input {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .Login-Container button {
+      width: 100%;
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  /* Footer Adjustments */
+  .Login-footer, .Login-login-footer {
+      font-size: 14px;
+  }
+}
+
+
+/* Forget Password */
+.Login-Forgot-password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: hsl(0, 1%, 14%);
+  border-radius: 10px;
+  margin-top: 100px;
+  width: 60%;
+  margin-left:-100px;
+}
+.Login-Forgot-password-container h2 {
+font-size:35px;
+  margin-bottom: 20px;
+  color: white ;
+}
+.Login-forgot-password input,
+.Login-Forgot-password-container input {
+  width: 100%;
+  height:65px;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid rgb(255, 189, 32);
+  border-radius: 15px;
+  color:white;
+  margin-top:25px;
+  background: hsl(0, 1%, 14%);
+}
+
+/* OTP Container */
+.Login-otp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.Login-otp-input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid rgb(255, 189, 32);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.Login-timer {
+  color: white;
+}
+
+.Login-OTP-Resend {
+  color: rgb(255, 189, 32);
+  cursor: pointer;
+}
+.Login-OTP-Resend:hover {
+  text-decoration: underline;
+}
+.Login-Next-Button,
+.Login-Change-Password {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 20px;
+  background: black;
+  color: rgb(255, 189, 32);
+  font-size: 16px;
+  cursor: pointer;
+  border:1px solid rgb(255, 189, 32);
+}
+
+.Login-Next-Button:hover ,
+.Login-Change-Password:hover {
+  background: rgb(255, 189, 32);
+  border:1px solid #000;
+  color: #000;
+}
+.Login-Forgot-password-text {
+  color:#fff;
+  text-align:right;
+  margin-right:40px;
+  margin-bottom:0;
+  margin-top:10px;
+  cursor:pointer;
+}

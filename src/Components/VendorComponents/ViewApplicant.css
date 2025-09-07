@@ -1,0 +1,110 @@
+.ViewApplicant-card {
+    width: 800px;
+    background: hsl(0, 1%, 14%);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeIn 0.5s forwards;
+    border:1px solid rgb(255, 189, 32);
+    margin-top:-30px;
+    position:relative;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.ViewApplicant-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 189, 32, 0.4);
+}
+
+.ViewApplicant-img {
+    width: 200px;
+    height: 270px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.ViewApplicant-details {
+    flex: 1;
+}
+
+.ViewApplicant-name {
+    margin-bottom: 10px;
+    color: rgb(255, 189, 32);
+    font-size: 24px;
+}
+
+.ViewApplicant-section {
+    margin-bottom: 10px;
+}
+
+.ViewApplicant-section strong {
+    display: block;
+    font-size: 18px;
+    color: rgb(255, 189, 32);
+    margin-bottom: 2px;
+}
+
+.ViewApplicant-section span {
+    color: white;
+    font-size: 16px;
+}
+
+.ViewApplicant-btn {
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    padding: 12px 15px;
+    border: none;
+    background: rgb(255, 189, 32);
+    color: black;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.ViewApplicant-btn:hover {
+    background: #000;
+    color: rgb(255, 189, 32);
+    transform: translateY(-2px);
+    border:1px solid rgb(255, 189, 32);
+}
+/* 🔹 1. Add this for proper spacing between cards */
+.ViewApplicant-container {
+    display: flex;
+    flex-direction: column; /* Keeps cards stacked */
+    align-items: center; /* Centers them */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+}
+
+/* 🔹 2. Fixing card width & responsiveness */
+.ViewApplicant-card {
+    width: 100%;
+    max-width: 700px; /* Ensures it fits well on screens */
+    margin: 0 auto; /* Centers cards */
+}
+
+/* 🔹 3. Fix button positioning so it stays at the bottom */
+.ViewApplicant-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures button stays at the bottom */
+}
+
+/* 🔹 4. Ensuring button does not misalign */
+.ViewApplicant-btn {
+    align-self: flex-end; /* Push button to the bottom right */
+}
