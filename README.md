@@ -102,14 +102,6 @@ To run tests:
 
 npm test
 
-## 📦 Deployment
-
-Frontend: Deployed on Heroku. Access the live application at https://jobhub-frontend.herokuapp.com
-.
-
-Backend: Deployed on Heroku. API endpoint available at https://jobhub-backend.herokuapp.com/api
-.
-
 ## 📌 Future Enhancements
 
 Implement real-time chat between job seekers and employers.
